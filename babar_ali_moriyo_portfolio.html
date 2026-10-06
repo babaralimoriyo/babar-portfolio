@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Babar Ali Moriyo - Professional Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fefce8',
+                            100: '#fef9c3',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            700: '#a16207',
+                            850: '#172554',
+                            900: '#0f172a',
+                            950: '#020617',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-glow {
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, rgba(15, 23, 42, 0) 70%);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-yellow-500 selection:text-slate-950">
+
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#hero" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-slate-950 font-bold text-lg shadow-lg group-hover:scale-105 transition-transform">
+                    BM
+                </div>
+                <div>
+                    <span class="font-bold text-lg tracking-tight block text-white group-hover:text-yellow-400 transition-colors">Babar Ali Moriyo</span>
+                    <span class="text-xs text-slate-400 block">Professional Portfolio</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#about" class="text-slate-300 hover:text-yellow-400 transition-colors">About</a>
+                <a href="#skills" class="text-slate-300 hover:text-yellow-400 transition-colors">Skills</a>
+                <a href="#experience" class="text-slate-300 hover:text-yellow-400 transition-colors">Experience</a>
+                <a href="#education" class="text-slate-300 hover:text-yellow-400 transition-colors">Education & Languages</a>
+                <a href="#contact" class="text-slate-300 hover:text-yellow-400 transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden md:flex items-center space-x-4">
+                <button onclick="openResumeModal()" class="px-4 py-2 rounded-lg bg-slate-900 border border-slate-700 text-yellow-400 hover:bg-slate-800 transition text-sm font-medium flex items-center gap-2">
+                    <i class="fa-solid fa-file-arrow-down"></i> View CVs
+                </button>
+                <a href="#contact" class="px-4 py-2 rounded-lg bg-yellow-500 text-slate-950 hover:bg-yellow-400 transition text-sm font-semibold shadow-lg shadow-yellow-500/10">
+                    Hire Me
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-4 space-y-3">
+            <a href="#about" class="block text-slate-300 hover:text-yellow-400 py-1">About</a>
+            <a href="#skills" class="block text-slate-300 hover:text-yellow-400 py-1">Skills</a>
+            <a href="#experience" class="block text-slate-300 hover:text-yellow-400 py-1">Experience</a>
+            <a href="#education" class="block text-slate-300 hover:text-yellow-400 py-1">Education & Languages</a>
+            <a href="#contact" class="block text-slate-300 hover:text-yellow-400 py-1">Contact</a>
+            <div class="pt-2 flex flex-col gap-2">
+                <button onclick="openResumeModal()" class="w-full py-2 rounded-lg bg-slate-800 text-yellow-400 text-sm font-medium text-center">
+                    View CVs
+                </button>
+                <a href="#contact" class="w-full py-2 rounded-lg bg-yellow-500 text-slate-950 text-sm font-semibold text-center">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="hero" class="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden">
+        <div class="absolute inset-0 hero-glow pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-yellow-400 animate-pulse"></span> Available for Full-Time Opportunities in Karachi
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+                        Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-600">Babar Ali Moriyo</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 font-medium max-w-2xl mx-auto lg:mx-0">
+                        Customer Service Specialist | Housekeeping Supervisor | B2B Sales & Business Development Professional
+                    </p>
+                    <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto lg:mx-0">
+                        Self-motivated professional with practical experience in client handling, team supervision, operational coordination, and business management as Founder & Owner of Golden CV LTD.
+                    </p>
+                    
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#contact" class="px-6 py-3 rounded-xl bg-yellow-500 text-slate-950 font-bold hover:bg-yellow-400 transition shadow-lg shadow-yellow-500/20 flex items-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+                        </a>
+                        <button onclick="openResumeModal()" class="px-6 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 transition font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-id-card text-yellow-400"></i> Download CVs
+                        </button>
+                    </div>
+
+                    <div class="pt-6 border-t border-slate-800 flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-slate-400">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-yellow-400"></i> 0315-0213846
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-yellow-400"></i> bbrbrft@gmail.com
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-yellow-400"></i> Karachi, Pakistan
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96">
+                        <!-- Decorative ring / glow -->
+                        <div class="absolute inset-0 rounded-3xl bg-gradient-to-tr from-yellow-500 to-yellow-300 transform rotate-6 scale-105 opacity-30 blur-sm"></div>
+                        <div class="absolute inset-0 rounded-3xl bg-slate-900 border-2 border-yellow-500/50 shadow-2xl overflow-hidden flex items-center justify-center">
+                            <!-- Profile picture from provided asset -->
+                            <img src="148035.png" alt="Babar Ali Moriyo" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x400/0f172a/eab308?text=Babar+Ali'">
+                        </div>
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-4 -right-4 bg-slate-900/90 backdrop-blur-md border border-slate-700 px-4 py-3 rounded-2xl shadow-xl flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 text-xl font-bold">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-slate-400">Founder & Owner</span>
+                                <span class="text-sm font-bold text-white">Golden CV LTD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-yellow-400 text-sm font-semibold tracking-wider uppercase">Professional Overview</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">About Me</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl hover:border-yellow-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Customer Service & Sales</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Extensive experience in direct client handling, chat/phone sales, requirement understanding, follow-ups, objection handling, and converting international inbound prospects across US, Canada, UK, and Gulf regions.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl hover:border-yellow-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-clipboard-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Supervision & Operations</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Practical background in facility maintenance supervision, security guard & sweeper team coordination, duty allocation, salary sheet preparation, R/O plant operations, and maintaining strict workplace discipline.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl hover:border-yellow-500/50 transition group">
+                    <div class="w-14 h-14 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-2xl font-bold mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-building-user"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Entrepreneurship</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Founder & Owner of Golden CV LTD (UK registered company), managing day-to-day operations, client consultations, project pipelines, and ensuring high-quality professional service delivery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-yellow-400 text-sm font-semibold tracking-wider uppercase">Core Competencies</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Expertise & Skills</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-yellow-500/40 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Customer Relations</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Client Handling & Follow-ups</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Complaint & Issue Resolution</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Requirement Understanding</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Professional Verbal & Written</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-yellow-500/40 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center">
+                            <i class="fa-solid fa-broom"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Facility & Maintenance</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Housekeeping & Hygiene Standards</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Safety Procedures & PPE Protocol</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Chemical Handling & Safety</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> R/O Plant Operational Support</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-yellow-500/40 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Sales & Business Dev</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> B2B & Chat Sales Conversion</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Meta Ads Lead Management</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> CRM Tracking & Scheduling</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Pipeline & Target Execution</li>
+                    </ul>
+                </div>
+
+                <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl hover:border-yellow-500/40 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/20 text-yellow-400 flex items-center justify-center">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 class="font-bold text-white text-lg">Team Management</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Staff Duty Allocation & Rosters</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Salary Sheet Preparation</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Security & Sweeper Supervision</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-yellow-500 text-xs"></i> Administrative Record Keeping</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 bg-slate-900/50 border-y border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-yellow-400 text-sm font-semibold tracking-wider uppercase">Career History</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Professional Experience</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto space-y-8">
+                
+                <!-- Experience 1 -->
+                <div class="relative pl-8 sm:pl-10 border-l-2 border-yellow-500/50 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-yellow-500 border-4 border-slate-950 group-hover:scale-125 transition-transform"></div>
+                    <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Founder & Owner</h3>
+                                <p class="text-yellow-400 font-medium text-sm">Golden CV LTD (Writing CV Ltd)</p>
+                            </div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-xs font-semibold w-fit">2021 – Present</span>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Manage day-to-day business operations, client communication, sales pipeline, service delivery, and project coordination for international and local clients.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400 list-disc list-inside">
+                            <li>Direct communication with clients regarding service needs, CV writing, LinkedIn optimization, and academic writing.</li>
+                            <li>Executed systematic CRM follow-ups, consistently driving and meeting monthly sales targets ($3,000+).</li>
+                            <li>Handle online customer support, project queries, and comprehensive client relationship management.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative pl-8 sm:pl-10 border-l-2 border-slate-800 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-yellow-500 transition-colors"></div>
+                    <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Maintenance Supervisor</h3>
+                                <p class="text-yellow-400 font-medium text-sm">Al Asr Group</p>
+                            </div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold w-fit">Operational Experience</span>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Coordinated day-to-day operational responsibilities, facility maintenance tasks, and staff coordination.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400 list-disc list-inside">
+                            <li>Prepared and maintained salary sheets for security guards and sweeper/cleaning staff.</li>
+                            <li>Maintained duty information, staff locations, assigned responsibilities, and staff records.</li>
+                            <li>Supported R/O plant-related operational coordination and ensured smooth daily workflow.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 3 -->
+                <div class="relative pl-8 sm:pl-10 border-l-2 border-slate-800 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-yellow-500 transition-colors"></div>
+                    <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Security Supervisor</h3>
+                                <p class="text-yellow-400 font-medium text-sm">Brogade Company</p>
+                            </div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold w-fit">2017 – 2019</span>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Managed security staff deployment, workplace discipline, and safety compliance.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-400 list-disc list-inside">
+                            <li>Supervised security personnel across assigned duty stations.</li>
+                            <li>Handled staff-related matters, shift schedules, and safety procedures.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 4 -->
+                <div class="relative pl-8 sm:pl-10 border-l-2 border-slate-800 group">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-slate-700 border-4 border-slate-950 group-hover:bg-yellow-500 transition-colors"></div>
+                    <div class="bg-slate-900 border border-slate-800 p-6 sm:p-8 rounded-2xl shadow-xl">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Office Assistant (Peon)</h3>
+                                <p class="text-yellow-400 font-medium text-sm">Sui Gas Company</p>
+                            </div>
+                            <span class="inline-block px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold w-fit">2015 – 2017</span>
+                        </div>
+                        <p class="text-slate-300 text-sm mb-4">
+                            Provided office support, documentation tasks, and routine administrative operations.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                
+                <!-- Education -->
+                <div>
+                    <div class="mb-8">
+                        <span class="text-yellow-400 text-sm font-semibold tracking-wider uppercase">Academic Background</span>
+                        <h2 class="text-3xl font-extrabold text-white mt-2">Education</h2>
+                        <div class="w-16 h-1 bg-yellow-500 mt-3 rounded-full"></div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-lg">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg font-bold text-white">Matric / Secondary Education (Class 9)</h3>
+                                <span class="px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400 text-xs font-semibold">2026 – Present</span>
+                            </div>
+                            <p class="text-slate-300 text-sm">Allama Iqbal Open University (AIOU), Karachi</p>
+                        </div>
+
+                        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-lg">
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-lg font-bold text-white">Primary Education</h3>
+                                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-300 text-xs font-semibold">Completed</span>
+                            </div>
+                            <p class="text-slate-300 text-sm">Government School Karchat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages & Strengths -->
+                <div>
+                    <div class="mb-8">
+                        <span class="text-yellow-400 text-sm font-semibold tracking-wider uppercase">Communication & Traits</span>
+                        <h2 class="text-3xl font-extrabold text-white mt-2">Languages & Strengths</h2>
+                        <div class="w-16 h-1 bg-yellow-500 mt-3 rounded-full"></div>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-lg mb-6">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-language text-yellow-400"></i> Languages Known
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 rounded-xl bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">English</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Urdu</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Sindhi</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Balochi</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Punjabi</span>
+                            <span class="px-3 py-1.5 rounded-xl bg-slate-800 text-slate-200 text-sm font-medium border border-slate-700">Saraiki</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-yellow-400"></i> Key Strengths
+                        </h3>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-500 text-xs"></i> Strong work ethic and high self-motivation</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-500 text-xs"></i> Comfortable communicating with diverse customers</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-500 text-xs"></i> Responsible, organized, and punctual</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-star text-yellow-500 text-xs"></i> Adaptable to shifts and operational requirements</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-slate-900/50 border-t border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-yellow-400 text-sm font-semibold tracking-wider uppercase">Get In Touch</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Contact Me</h2>
+                <div class="w-16 h-1 bg-yellow-500 mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl space-y-6">
+                        <h3 class="text-xl font-bold text-white">Contact Information</h3>
+                        <p class="text-slate-400 text-sm">
+                            Feel free to reach out for professional opportunities in Customer Service, Facility Supervision, or B2B Sales.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400">Phone / WhatsApp</span>
+                                    <a href="tel:03150213846" class="text-white font-semibold hover:text-yellow-400 transition">0325-0213846</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400">Email Address</span>
+                                    <a href="mailto:bbrbrft@gmail.com" class="text-white font-semibold hover:text-yellow-400 transition">bbrbrft@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 text-yellow-400 flex items-center justify-center text-lg flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs text-slate-400">Location</span>
+                                    <span class="text-white font-semibold">Sumaira Bunglows, Safoora, Karachi, Pakistan</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="bg-slate-900 border border-slate-800 p-8 rounded-2xl shadow-xl space-y-6">
+                        <h3 class="text-xl font-bold text-white">Send Me a Message</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs text-slate-400 mb-2 font-medium">Your Name</label>
+                                <input type="text" id="form-name" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:border-yellow-500 focus:outline-none transition text-sm" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label class="block text-xs text-slate-400 mb-2 font-medium">Your Email / Phone</label>
+                                <input type="text" id="form-contact" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:border-yellow-500 focus:outline-none transition text-sm" placeholder="Email or phone number">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-2 font-medium">Subject / Role</label>
+                            <input type="text" id="form-subject" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:border-yellow-500 focus:outline-none transition text-sm" placeholder="e.g. Job Offer / Inquiry">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs text-slate-400 mb-2 font-medium">Message</label>
+                            <textarea id="form-message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-950 border border-slate-800 text-white focus:border-yellow-500 focus:outline-none transition text-sm resize-none" placeholder="Write your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-yellow-500 text-slate-950 font-bold hover:bg-yellow-400 transition shadow-lg shadow-yellow-500/20 text-sm">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-8 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>&copy; 2026 Babar Ali Moriyo. All Rights Reserved.</p>
+            <p class="text-xs">Customer Service | Facility Supervision | B2B Sales</p>
+        </div>
+    </footer>
+
+    <div id="resume-modal" class="fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+            <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                    <i class="fa-solid fa-file-lines text-yellow-400"></i> Select Professional CV Profile
+                </h3>
+                <button onclick="closeResumeModal()" class="text-slate-400 hover:text-white text-xl">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <div class="p-6 space-y-4">
+                <p class="text-slate-400 text-sm">
+                    Choose from Babar Ali Moriyo's specialized resumes tailored for different career tracks:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl hover:border-yellow-500/50 transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-yellow-400 font-semibold uppercase">Customer Service</span>
+                            <h4 class="text-white font-bold text-base mt-1">Customer Services Specialist</h4>
+                            <p class="text-xs text-slate-400 mt-2">Focuses on client handling, communication, follow-ups, and Golden CV LTD leadership.</p>
+                        </div>
+                        <button onclick="previewCV('Customer Service Specialist')" class="mt-4 w-full py-2 rounded-lg bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 hover:bg-yellow-500 hover:text-slate-950 transition text-xs font-bold">
+                            View / Download CV
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl hover:border-yellow-500/50 transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-yellow-400 font-semibold uppercase">Facility & Operations</span>
+                            <h4 class="text-white font-bold text-base mt-1">Housekeeping Supervisor</h4>
+                            <p class="text-xs text-slate-400 mt-2">Focuses on staff supervision, duty allocation, salary sheets, and safety procedures.</p>
+                        </div>
+                        <button onclick="previewCV('Housekeeping Supervisor')" class="mt-4 w-full py-2 rounded-lg bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 hover:bg-yellow-500 hover:text-slate-950 transition text-xs font-bold">
+                            View / Download CV
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl hover:border-yellow-500/50 transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-yellow-400 font-semibold uppercase">Sales & Growth</span>
+                            <h4 class="text-white font-bold text-base mt-1">International Sales Executive</h4>
+                            <p class="text-xs text-slate-400 mt-2">Focuses on B2B sales, Meta Ads lead conversion, CRM tracking, and international markets.</p>
+                        </div>
+                        <button onclick="previewCV('International Sales Executive')" class="mt-4 w-full py-2 rounded-lg bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 hover:bg-yellow-500 hover:text-slate-950 transition text-xs font-bold">
+                            View / Download CV
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-950 border border-slate-800 p-4 rounded-xl hover:border-yellow-500/50 transition flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-yellow-400 font-semibold uppercase">Sales & Pipeline</span>
+                            <h4 class="text-white font-bold text-base mt-1">Front Sales Specialist</h4>
+                            <p class="text-xs text-slate-400 mt-2">Focuses on chat sales, revenue targets, and multi-channel prospect engagement.</p>
+                        </div>
+                        <button onclick="previewCV('Front Sales Specialist')" class="mt-4 w-full py-2 rounded-lg bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 hover:bg-yellow-500 hover:text-slate-950 transition text-xs font-bold">
+                            View / Download CV
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="px-6 py-4 bg-slate-950 border-t border-slate-800 flex justify-end">
+                <button onclick="closeResumeModal()" class="px-4 py-2 rounded-lg bg-slate-800 text-slate-300 hover:bg-slate-700 text-sm font-medium">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="fixed bottom-6 right-6 z-50 bg-slate-900 border border-yellow-500/50 text-white px-6 py-3 rounded-xl shadow-2xl hidden transform translate-y-10 opacity-0 transition-all duration-300 flex items-center gap-3">
+        <i class="fa-solid fa-circle-check text-yellow-400 text-lg"></i>
+        <div>
+            <h5 class="font-bold text-sm" id="toast-title">Success</h5>
+            <p class="text-xs text-slate-400" id="toast-desc">Message sent successfully!</p>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Resume Modal Functions
+        function openResumeModal() {
+            document.getElementById('resume-modal').classList.remove('hidden');
+        }
+
+        function closeResumeModal() {
+            document.getElementById('resume-modal').classList.add('hidden');
+        }
+
+        function previewCV(role) {
+            closeResumeModal();
+            showToast('CV Selected', `Preparing ${role} resume for download/viewing.`);
+        }
+
+        // Contact Form Submission Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('form-name').value;
+            showToast('Message Sent!', `Thank you ${name}. Babar Ali will get back to you soon.`);
+            document.getElementById('contact-form').reset();
+        }
+
+        // Toast Notification Helper
+        function showToast(title, desc) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-title').innerText = title;
+            document.getElementById('toast-desc').innerText = desc;
+            
+            toast.classList.remove('hidden', 'translate-y-10', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-10', 'opacity-0');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 300);
+            }, 4000);
+        }
+    </script>
+</body>
+</html>
